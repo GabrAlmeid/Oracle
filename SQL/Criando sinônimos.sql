@@ -1,0 +1,44 @@
+
+-- CRIANDO SINONIMOS PRIVADOS
+
+CREATE SYNONYM departamentos
+FOR departments;
+
+CREATE SYNONYM dept
+FOR departments;
+
+-- UTILIZANDO SINONIMOS
+
+SELECT *
+FROM departamentos;
+
+SELECT *
+FROM dept;
+
+-- REMOVENDO SINONIMOS
+
+DROP SYNONYM departamentos;
+
+DROP SYNONYM dept;
+
+-- CRIANDO SINONIMOS PUBLICOS PARA TABELAS EM OUTRO SCHEMA
+
+
+CREATE PUBLIC SYNONYM departamentos
+FOR hr.departments;
+
+CREATE PUBLIC SYNONYM dept
+FOR hr.departments;
+
+SELECT *
+FROM departamentos;
+
+SELECT *
+FROM dept;
+
+-- REMOVENDO SINONIMOS PUBLICOS
+
+
+DROP PUBLIC SYNONYM departamentos;
+
+DROP PUBLIC SYNONYM dept;
